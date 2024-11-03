@@ -467,7 +467,7 @@ footer p {
 /********************************* media query ***********************************/
 @media screen and (max-width: 779px) {
    header .caption h1{
-        font-size: 30px;
+        font-size: 20px;
     }
     .contact-area{
         width: 95%;
