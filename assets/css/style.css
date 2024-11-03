@@ -1,0 +1,463 @@
+:root {
+    --first-font: "Poppins", serif;
+    --second-font: "Montserrat", serif;
+}
+
+body {
+    font-family: var(--first-font);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/************************************** headings ****************************/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--second-font);
+}
+
+.services h2,
+.portfolio h2,
+.testimonial h2,
+.team h2,
+.contact h2 {
+    position: relative;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 44px;
+    color: rgb(52, 52, 52);
+    z-index: 5;
+    display: inline-block;
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+}
+
+.services h2::before,
+.portfolio h2::before,
+.testimonial h2::before,
+.team h2::before,
+.contact h2::before {
+    content: "";
+    width: 100%;
+    height: 70%;
+    position: absolute;
+    bottom: -10px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+/************************************** start nav ***********************************/
+.navbar-brand {
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: 400;
+    color: black;
+}
+
+.navbar-nav .nav-link.active {
+    border-bottom: 2px solid black;
+}
+
+.nav-item:hover a {
+    border-bottom: 2px solid black;
+}
+
+/*************************************** end nav ***********************************/
+
+/************************************* start home *********************************/
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)), url(../imgs/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: top center;
+}
+
+.caption h5 {
+    font-size: 50px;
+}
+
+.caption h1 {
+    font-size: 3.75rem;
+}
+
+.caption h1 span::after {
+    content: "";
+    border-right: 3px solid white;
+    animation: headerAnimation 8s infinite;
+}
+
+.caption ul li {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.caption ul li a {
+    color: white;
+}
+
+.social-icons a {
+    background-color: rgba(0, 0, 0, .3);
+    color: white;
+}
+
+/*********************************** end home ***********************************/
+/********************************** start about **********************************/
+.about h3 {
+    font-weight: 800;
+}
+
+.figure img {
+    position: relative;
+    bottom: 4%;
+}
+
+.figure {
+    background-image: linear-gradient(rgba(255, 255, 255, 1), rgba(255, 255, 255, .7)), url(../imgs/dots.png);
+    background-size: contain;
+    background-position: bottom;
+}
+
+.about .dotsLayer::after {
+    content: "";
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    left: -10px;
+    bottom: -5px;
+    background-image: url(../imgs/dots.png);
+    background-repeat: repeat;
+    z-index: -1;
+}
+
+.bar-h {
+    height: 1.5rem;
+}
+
+.bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.about .buttons button {
+    font-size: 13px;
+}
+
+.about .buttons .btn-submit {
+    transition: all 1s;
+}
+
+.about .buttons .btn-submit:hover {
+    background-color: white;
+    color: black;
+}
+
+.about .buttons .btn-2 {
+    transition: all 1s;
+}
+
+.about .buttons .btn-2:hover {
+    background-color: black;
+    color: white;
+}
+
+/* progress bar animation */
+.p-load {
+    animation: slide-in 1s linear forwards;
+}
+
+@keyframes slide-in {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+/*********************************** end about ***********************************/
+/********************************** start Services **********************************/
+.services {
+    background-color: #F7F7F7;
+}
+
+.services .card h6 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.services .card p {
+    font-size: 14px;
+    word-spacing: 2px;
+    color: #748182;
+}
+
+.services .card {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.services .card .card-icons {
+    font-size: 30px;
+    margin-bottom: 20px;
+    width: 25px;
+    height: 25px;
+    line-height: 70px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.services .card .card-icons {
+    background-color: #f4f4f4;
+}
+
+.services .card:hover .card-icons {
+    color: white;
+    background-color: black;
+}
+
+/*********************************** end Services ***********************************/
+/********************************** start portfolio **********************************/
+.navTab {
+    font-size: 16;
+    font-weight: 700;
+}
+
+.navTab:hover {
+    color: black;
+}
+
+.portfolio .card {
+    border: none;
+}
+
+.hover-card .h-icons a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.hover-card .h-icons {
+    top: 50%;
+    transition: all 0.8s;
+    display: flex;
+    justify-content: center;
+}
+
+.hover-card .h-icons a:hover {
+    background-color: white;
+    color: black;
+}
+
+.portfolio .cards .hover-card h6 {
+    top: 35%;
+    transition: all 0.8s;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.portfolio .cards:hover .hover-card h6 {
+    top: 38%;
+}
+
+.portfolio .cards .hover-card {
+    left: 5px;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    background-color: white;
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.portfolio .cards:hover .hover-card {
+    opacity: 0.95;
+}
+
+.portfolio .cards:hover .hover-card .h-icons {
+    top: 47%;
+}
+
+/*********************************** end portfolio ***********************************/
+/********************************** start slider **********************************/
+.testimonial {
+    background-color: #F7F7F7;
+}
+
+.testimonial .redius {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #869791;
+    margin: 8px;
+}
+
+.testimonial .carousel-inner .carousel-item img {
+    width: 90px;
+    height: 90px;
+}
+
+.testimonial .paragraph {
+    font-size: 15px;
+    color: #748182;
+    word-spacing: 2px;
+}
+
+.testimonial .ps {
+    font-size: 12px;
+    color: #748182;
+}
+
+/*********************************** end slider ***********************************/
+/*********************************** start counter ***********************************/
+.count .p-count {
+    font-weight: 600;
+    font-size: 15px;
+    color: #748182;
+}
+
+.count .num {
+    font-weight: 900;
+}
+
+/*********************************** end counter ***********************************/
+/*********************************** start team ***********************************/
+.team {
+    background-color: #F7F7F7;
+}
+
+.team h4 {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.team h5 {
+    font-size: 20;
+    font-weight: 700;
+}
+
+.team-layer ul li a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border: 1px solid black;
+}
+
+.team-layer ul li a:hover {
+    background-color: white;
+    color: black;
+}
+
+.team .team-text {
+    background-color: #5B5B5B;
+}
+
+.team .team-content .team-layer {
+    inset: 5px;
+    opacity: 0;
+    transition: all 0.5s;
+    transform: rotateY(180deg) scale(0.5, 0.5);
+}
+
+.team .team-content:hover .team-layer {
+    cursor: pointer;
+    opacity: .95;
+    transform: rotateY(0deg) scale(1, 1);
+}
+
+.team .team-img:hover img {
+    transform: scale(1.2);
+}
+
+.team .team-img img {
+    transition: all 0.4s ease 0s;
+}
+
+/*********************************** end team ***********************************/
+/********************************* start contact ***********************************/
+.contact .item h6 {
+    color: #343434;
+}
+
+.contact .item p {
+    color: #748182;
+    font-size: 15px;
+}
+
+.contact .item .con-icon {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+}
+
+.contact .item .con-icon:hover {
+    background-color: black;
+    color: white;
+}
+
+.contact input {
+    outline: none;
+    background-color: #F4F4F4;
+}
+
+.contact-area {
+    width: 75%;
+}
+
+textarea {
+    background-color: #F4F4F4;
+    height: 150px;
+    outline: none;
+}
+
+.contact .btn-submit {
+    font-size: 13px;
+    transition: all 1s;
+}
+
+.contact .btn-submit:hover {
+    background-color: white;
+    color: black;
+}
+
+/********************************* end contact ***********************************/
+footer {
+    background-color: #1C1C1C;
+}
+
+footer p {
+    word-spacing: 2px;
+    font-size: 13px;
+    color: #748182;
+}
