@@ -472,5 +472,17 @@ footer p {
     .contact-area{
         width: 95%;
     }
+    .navbar-nav .nav-link.active {
+        border: none;
+    }
+
+    .nav-item {
+        padding: 7px;
+        text-align: center;
+    }
+
+    .nav-item:hover a {
+        border: none;
+    }
 }
 /********************************* the enddd ***********************************/
